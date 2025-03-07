@@ -1,0 +1,6 @@
+heart_rate,blood_pressure,oxygen_level,injury_severity,triage_category
+120,80,95,3,Yellow
+80,120,98,1,Green
+150,60,85,5,Red
+90,110,97,2,Yellow
+130,70,92,4,Red

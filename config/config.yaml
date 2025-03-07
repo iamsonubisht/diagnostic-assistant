@@ -1,0 +1,38 @@
+logging:
+  level: INFO
+  format: "%(asctime)s - %(levelname)s - %(message)s"
+  file: logs/system.log
+
+data:
+  file: data/mock_patient_data.csv
+  test_size: 0.2
+  random_state: 42
+
+models:
+  triage:
+    type: RandomForest
+    n_estimators: 100
+    random_state: 42
+
+forecasting:
+  periods: 7
+
+database:
+  url: sqlite:///data/patients.db
+
+cache:
+  host: localhost
+  port: 6379
+  db: 0
+
+hospitals:
+  Hospital A:
+    capacity: 100
+  Hospital B:
+    capacity: 80
+
+patients:
+  Patient A:
+    id: 1
+  Patient B:
+    id: 2

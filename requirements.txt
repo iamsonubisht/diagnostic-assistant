@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pandas
+scikit-learn
+prophet
+ortools
+aiofiles
+sqlalchemy
+databases
+redis
+pytest
+containers 
+dependency-injector
