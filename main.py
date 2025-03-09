@@ -2,43 +2,49 @@ import asyncio
 from containers import Container
 import logging
 
-container = Container()
+# Set up logging configuration to log to console
+logging.basicConfig(
+    level=logging.INFO,  # Set to INFO or DEBUG as needed
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
-# ✅ Debugging: Check if YAML is loading correctly
-try:
-    container.config.from_yaml("config/config.yaml")
-    print("✅ Config Loaded Successfully:")
-    print(container.config())  # Should be a dictionary
-    print("✅ Type of config:", type(container.config()))  # Should be <class 'dict'>
-except Exception as e:
-    print(f"❌ Error loading config: {e}")
+# Initialize the container
+container = Container()
+container.config.from_yaml("config/config.yaml")
 
 async def main():
     try:
+        # Load the data processor
         data_processor = container.data_processor()
-        print("✅ Data Processor Loaded Successfully")
-
         X, y = await data_processor.get_features_and_target()
-        print("✅ Features and Target Loaded")
-        print("🔹 X (features):", X)
-        print("🔹 y (target):", y)
 
+        # Load and train the triage model
         triage_model = container.triage_model()
-        print("✅ Triage Model Loaded Successfully")
-
         triage_model.train(X, y)
         evaluation_report = triage_model.evaluate(X, y)
-        print("✅ Triage Model Evaluation:")
-        print(evaluation_report)
+        logger.info("Triage Model Evaluation:")
+        logger.info(evaluation_report)
 
+        # Predict triage categories for all patients
+        predicted_triage = triage_model.predict(X)
+
+        # Resource allocation
         allocator = container.resource_allocator()
-        print("✅ Resource Allocator Loaded Successfully")  # ✅ Added Success Message
-        #print("🛠️ Available Methods:", [method for method in dir(allocator) if not method.startswith("__")])  # Clean Output
+        allocations = await allocator.allocate_resources(predicted_triage)  # Pass predicted triage
 
-        await allocator.allocate_resources()
+        # Display all patient allocations
+        print("Patient Allocations:")
+        for patient_id, triage_category in enumerate(predicted_triage, start=1):
+            if patient_id - 1 < len(allocations):  # Check if the index is within bounds
+                allocated_hospital = allocations[patient_id - 1]  # Assuming allocations is a list
+                print(f"Patient {patient_id} (Triage: {triage_category}) -> {allocated_hospital}")
+            else:
+                print(f"Patient {patient_id} (Triage: {triage_category}) -> No allocation available")
 
     except Exception as e:
-        print(f"❌ An error occurred: {e}")
+        logger.error(f"An error occurred: {e}")
+        print(f"An error occurred: {e}")
 
 if __name__ == "__main__":
     asyncio.run(main())

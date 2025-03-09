@@ -1,0 +1,8 @@
+2025-03-08 21:36:24,680 - __main__ - INFO - Initializing system...
+2025-03-08 21:36:24,687 - __main__ - INFO - Processing patient data...
+2025-03-08 21:36:24,688 - __main__ - ERROR - System failure: 'PatientDataProcessor' object has no attribute 'load_and_preprocess'
+Traceback (most recent call last):
+  File "D:\git hub\diagnostic-assistant\main.py", line 33, in main
+    X, y = await data_processor.load_and_preprocess()
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PatientDataProcessor' object has no attribute 'load_and_preprocess'

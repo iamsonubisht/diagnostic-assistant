@@ -11,3 +11,4 @@ redis
 pytest
 containers 
 dependency-injector
+plotly
