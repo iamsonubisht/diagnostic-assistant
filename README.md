@@ -3,7 +3,8 @@
 A Python-based application designed to assist healthcare professionals in managing emergency situations efficiently. It includes modules for **data processing, triage prediction, resource allocation, demand forecasting, database operations, and caching**.
 
 ---
-
+## ✨ IOS -SS(MOBILE_PHONE)
+docs/1.png
 ## ✨ Features
 
 - **📊 Data Processing:** Load, preprocess, and extract features from patient data.
