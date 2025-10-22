@@ -7,14 +7,24 @@ A Python-based application designed to assist healthcare professionals in managi
 
 | | | |
 |:---:|:---:|:---:|
-| ![](A-MobilePhone_Project/docs/1.jpeg) | ![](A-MobilePhone_Project/docs/2.jpeg) | ![](A-MobilePhone_Project/docs/3.jpeg) |
-| ![](A-MobilePhone_Project/docs/4.jpeg) | ![](A-MobilePhone_Project/docs/5.jpeg) | ![](A-MobilePhone_Project/docs/6.jpeg) |
+| ![](docs/1.jpeg) | ![](docs/2.jpeg) | ![](docs/3.jpeg) |
+| ![](docs/4.jpeg) | ![](docs/5.jpeg) | ![](docs/6.jpeg) |
+| ![](docs/7.jpeg) | ![](docs/8.jpeg) | ![](docs/9.jpeg) |
 
 > 📸 *iOS Interface showcasing patient triage flow, doctor dashboard, and emergency alerts.*
 
 ---
 
+## ✨ System Architecture Diagram
+
+![System Architecture](docs/excalidraw.png)
+
+> 📊 *Excalidraw diagram showing the SwiftCare multi-agent system architecture and data flow.*
+
+---
+
 ## ✨ Features
+
 
 
 - **📊 Data Processing:** Load, preprocess, and extract features from patient data.
