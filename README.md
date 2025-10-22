@@ -3,14 +3,19 @@
 A Python-based application designed to assist healthcare professionals in managing emergency situations efficiently. It includes modules for **data processing, triage prediction, resource allocation, demand forecasting, database operations, and caching**.
 
 ---
-## ✨ IOS -SS(MOBILE_PHONE)
-(A-MobilePhone_Project/docs/1.jpeg)
-(A-MobilePhone_Project/docs/2.jpeg)
-(A-MobilePhone_Project/docs/3.jpeg)
-(A-MobilePhone_Project/docs/4.jpeg)
-(A-MobilePhone_Project/docs/5.jpeg)
-(A-MobilePhone_Project/docs/6.jpeg)
+## ✨ iOS Screenshots (📱 Mobile App Preview)
+
+| | | |
+|:---:|:---:|:---:|
+| ![](A-MobilePhone_Project/docs/1.jpeg) | ![](A-MobilePhone_Project/docs/2.jpeg) | ![](A-MobilePhone_Project/docs/3.jpeg) |
+| ![](A-MobilePhone_Project/docs/4.jpeg) | ![](A-MobilePhone_Project/docs/5.jpeg) | ![](A-MobilePhone_Project/docs/6.jpeg) |
+
+> 📸 *iOS Interface showcasing patient triage flow, doctor dashboard, and emergency alerts.*
+
+---
+
 ## ✨ Features
+
 
 - **📊 Data Processing:** Load, preprocess, and extract features from patient data.
 - **🚑 Triage Prediction:** Predicts triage categories using a **Random Forest model**.
