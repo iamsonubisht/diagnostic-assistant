@@ -4,7 +4,7 @@ A Python-based application designed to assist healthcare professionals in managi
 
 ---
 ## ✨ IOS -SS(MOBILE_PHONE)
-docs/1.png
+(A-MobilePhone_Project/docs)
 ## ✨ Features
 
 - **📊 Data Processing:** Load, preprocess, and extract features from patient data.
